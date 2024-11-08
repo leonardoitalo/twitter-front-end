@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useRegisterMutation } from 'features/auth/authApi'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {
   PrimaryActionButton,
   FormInputBox,
@@ -8,6 +8,7 @@ import {
   AuthCheckoutPageContainer,
   FormContent,
 } from 'styles/GlobalStyledsComponents'
+import { GoToLoginLink } from './styles'
 
 interface RegisterError {
   status: number
@@ -90,6 +91,10 @@ const Register: React.FC = () => {
             </PrimaryActionButton>
           </form>
         </FormContent>
+        <GoToLoginLink>
+          <span>Ja possui Login?</span>
+          <Link to={'/login'}>Ir para a página de login</Link>
+        </GoToLoginLink>
       </AuthCheckoutFormContainer>
     </AuthCheckoutPageContainer>
   )

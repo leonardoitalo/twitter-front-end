@@ -11,7 +11,7 @@ interface PostTweetRequest {
   content: string
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/'
+const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/'
 const selectToken = (state: RootState) => state.auth.token
 
 export const tweetApi = createApi({

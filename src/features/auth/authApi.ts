@@ -21,7 +21,7 @@ interface RegisterRequest {
   password: string
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/'
+const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/'
 
 export const authApi = createApi({
   reducerPath: 'authApi',

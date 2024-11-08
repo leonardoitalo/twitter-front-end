@@ -16,7 +16,7 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Routes>
         {/* Rota de login */}
         <Route path="/login" element={<Login />} />
